@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class NewActivity extends AppCompatActivity {
 
@@ -24,5 +26,10 @@ public class NewActivity extends AppCompatActivity {
                     .beginTransaction()
                     .replace(R.id.fragment_notes, details).commit();
         }
+    }
+    public void deletenote(View view) {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Заметка удаляется", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
